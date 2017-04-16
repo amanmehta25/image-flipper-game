@@ -1,0 +1,22 @@
+// -----------------------------------------------------------------------------
+// This file contains very basic styles.
+// -----------------------------------------------------------------------------
+
+html,
+body {
+    background: transparent;
+    font-size: 12px;
+    font-family: $base-font-family !important;
+
+    @media only screen and (min-width: 1025px) {
+        font-size: 14px;
+    }
+}
+
+button,
+select,
+html,
+textarea,
+input {
+    font-family: $base-font-family;
+}

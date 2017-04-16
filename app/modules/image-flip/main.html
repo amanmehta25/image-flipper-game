@@ -1,0 +1,31 @@
+<div class="flip-image">
+    <div class="prizes">
+        <div class="prizes__label">Remaining Prizes:</div>
+        <div ng-show="ImageFlip.prizes.bike">
+            <div ng-show="ImageFlip.prizes.tickets">{{ImageFlip.prizes.tickets}} Movies Tickets</div>
+            <div ng-show="ImageFlip.prizes.mobile">{{ImageFlip.prizes.mobile}} Mobile Phones</div>
+            <div>{{ImageFlip.prizes.bike}} Bike(Bumber Prize)</div>
+        </div>
+        <div ng-show="!ImageFlip.prizes.bike">
+            No prizes left
+        </div>
+    </div>
+
+    <div ng-show="ImageFlip.isGameEnds" class="game-ends">
+        <div class="game-ends__label" ng-show="ImageFlip.isGameWon">
+            Congrats! You Won a
+            {{(ImageFlip.prizes.tickets || ImageFlip.prizes.mobile == 3)  ? 'Movie Ticket' : ((ImageFlip.prizes.mobile || ImageFlip.prizes.bike == 1) ? 'Mobile Phone' : 'Bike (Bumper Prize)' )}}</div>
+        <div class="game-ends__label" ng-show="!ImageFlip.isGameWon">Sorry! You Lose</div>
+        <button class="button button--primary" ng-show="ImageFlip.prizes.bike" ng-click="ImageFlip.isGameEnds=!ImageFlip.isGameEnds">Play Again</button>
+        <button class="button button--primary" ng-show="!ImageFlip.prizes.bike" ng-click="ImageFlip.resetGame()">Reset Game</button>
+    </div>
+
+    <div ng-show="!ImageFlip.isGameEnds" class="flip-image__card" ng-class="{'flipped':!image.isFlipped}" ng-repeat="image in ImageFlip.images" ng-click="ImageFlip.selectImage(image)"> 
+        <div class="face front"> 
+            Click to see the movie name
+        </div> 
+        <div class="face back"> 
+            {{image.movieName}}
+        </div> 
+    </div> 
+</div>

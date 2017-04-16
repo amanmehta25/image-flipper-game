@@ -1,0 +1,97 @@
+.flip-image {
+    -webkit-perspective: 800;
+    margin: 50px auto;
+    max-width: 920px;
+}
+
+.prizes {
+    margin-bottom: 20px;
+    text-align: right;
+}
+
+.prizes__label {
+    color: $color-gray-light;
+    font-weight: $base-font-weight;
+}
+
+.game-ends {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.game-ends.ng-hide {
+    opacity: 0;
+}
+
+.game-ends.ng-hide-remove {
+    transition: all linear 2s;
+}
+
+.game-ends__label {
+    font-size: 22px;
+    margin-bottom: 40px;
+}
+
+.flip-image__card {
+    -webkit-transform-style: preserve-3d;
+    -webkit-transition: 0.4s;
+    display: inline-block;
+    height: 200px;
+    margin: 1%;
+    width: 23%;
+}
+
+.flip-image__card.flipped {
+    -webkit-transform: rotatex(-180deg);
+}
+
+.flip-image__card {
+    .face {
+        -webkit-backface-visibility: hidden;
+        font-size: 20px;
+        height: 100%;
+        padding: 20px;
+        position: absolute;
+        text-align: center;
+        width: 100%;
+        z-index: 2;
+    }
+
+    .front {
+        background: $color-gray-lighter;
+        color: $color-white;
+        cursor: pointer;
+        position: absolute;
+        z-index: 1;
+    }
+
+    .back {
+        -webkit-transform: rotatex(180deg);
+        background: $color-green;
+        color: $color-white;
+        cursor: pointer;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .flip-image__card {
+        margin: 1%;
+        width: 48%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .flip-image {
+        margin: 50px 16px;
+    }
+
+    .flip-image__card {
+        height: 150px;
+
+        .face {
+            font-size: 16px;
+            padding: 16px;
+            height: 150px;
+        }
+    }
+}

@@ -1,0 +1,38 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the main component.
+// -----------------------------------------------------------------------------
+.main-container {
+    text-align: center;
+    margin: 52px auto;
+    max-width: 540px;
+}
+
+.main-container__heading {
+    margin: 0;
+}
+
+.game-instructions {
+    margin: 24px 0;
+    text-align: left;
+}
+
+.game-instructions__label {
+    color: $color-gray-light;
+    font-weight: $base-font-weight;
+    margin-bottom: 8px;
+    text-decoration: underline;
+}
+
+.game-instructions__text {
+    color: $color-gray-light;
+}
+
+@media only screen and (max-width: 576px) {
+    .main-container {
+        margin: 40px 20px;
+    }
+
+    .main-container__heading {
+        font-size: 20px;
+    }
+}

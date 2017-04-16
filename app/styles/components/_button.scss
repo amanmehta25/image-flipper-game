@@ -1,0 +1,29 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+.button {
+    @include add-box-shadows(none);
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    position: relative;
+    outline: none;
+    border-radius: $small-border-radius;
+    min-width: 140px;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 15px;
+    text-align: center;
+    display: inline-block;
+    color: $color-white;
+    background-color: $color-orange;
+    border: 1px solid $color-orange;
+    cursor: pointer;
+    font-weight: $base-font-weight;
+
+    &--primary {
+        color: $color-white;
+        background-color: $color-orange;
+    }
+}
