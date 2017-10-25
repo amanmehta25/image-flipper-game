@@ -14,8 +14,10 @@ Check `node --version && npm --version && bower --version` for their versions.
 
 Get into root directory of this application
 
-`npm install`
-`bower install`
+- `npm install`
+- `bower install`
+- `sudo gem install sass`
+- `sudo gem install scss-lint`
 
 If you get into any permissions error, try
 
